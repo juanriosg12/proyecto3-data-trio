@@ -1,0 +1,16 @@
+artifact_uri: /Users/juanrios/Documents/Maestria/Analitica computacional para la toma
+  de desiciones/proyecto3/reportes/modelamiento/mlruns/444504848902634215/ae0dd6b5ff144af59ad3685ce3a49922/artifacts
+end_time: 1733200227801
+entry_point_name: ''
+experiment_id: '444504848902634215'
+lifecycle_stage: active
+run_id: ae0dd6b5ff144af59ad3685ce3a49922
+run_name: sedate-fox-977
+run_uuid: ae0dd6b5ff144af59ad3685ce3a49922
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733200058779
+status: 3
+tags: []
+user_id: juanrios

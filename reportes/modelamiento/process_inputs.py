@@ -30,7 +30,7 @@ fami_personashogar_to_num = {"1 a 2":0,"3 a 4":1,"5 a 6":2,"7 a 8":3,"9 o más":
 nosi_to_num={"No":0,"Si":1,	"unknown":-10}
 
 # General definitions for the coding
-cat_string_feats=["periodo","cole_mcpio_ubicacion"]
+cat_string_feats=["cole_mcpio_ubicacion"]
 cat_num_feats=["estu_tipodocumento","cole_area_ubicacion","cole_bilingue","cole_caracter","cole_genero","cole_jornada","cole_naturaleza","cole_sede_principal","estu_genero","fami_cuartoshogar","fami_educacionmadre","fami_educacionpadre","fami_estratovivienda","fami_personashogar","fami_tieneautomovil","fami_tienecomputador","fami_tieneinternet","fami_tienelavadora"]
 possible_targets=["punt_ingles","punt_matematicas","punt_sociales_ciudadanas","punt_c_naturales","punt_lectura_critica","punt_global"]
 possible_targets_cat=["desemp_ingles"]

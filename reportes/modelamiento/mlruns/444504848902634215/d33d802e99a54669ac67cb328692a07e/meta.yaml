@@ -1,0 +1,16 @@
+artifact_uri: /Users/juanrios/Documents/Maestria/Analitica computacional para la toma
+  de desiciones/proyecto3/reportes/modelamiento/mlruns/444504848902634215/d33d802e99a54669ac67cb328692a07e/artifacts
+end_time: 1733208694418
+entry_point_name: ''
+experiment_id: '444504848902634215'
+lifecycle_stage: active
+run_id: d33d802e99a54669ac67cb328692a07e
+run_name: wise-boar-939
+run_uuid: d33d802e99a54669ac67cb328692a07e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733208285011
+status: 3
+tags: []
+user_id: juanrios
