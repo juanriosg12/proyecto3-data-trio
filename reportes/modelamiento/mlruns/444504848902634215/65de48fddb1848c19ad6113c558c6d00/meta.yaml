@@ -1,0 +1,16 @@
+artifact_uri: /Users/juanrios/Documents/Maestria/Analitica computacional para la toma
+  de desiciones/proyecto3/reportes/modelamiento/mlruns/444504848902634215/65de48fddb1848c19ad6113c558c6d00/artifacts
+end_time: 1733193811090
+entry_point_name: ''
+experiment_id: '444504848902634215'
+lifecycle_stage: active
+run_id: 65de48fddb1848c19ad6113c558c6d00
+run_name: dazzling-wren-691
+run_uuid: 65de48fddb1848c19ad6113c558c6d00
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733193120201
+status: 3
+tags: []
+user_id: juanrios

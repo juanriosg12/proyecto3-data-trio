@@ -1,0 +1,16 @@
+artifact_uri: /Users/juanrios/Documents/Maestria/Analitica computacional para la toma
+  de desiciones/proyecto3/reportes/modelamiento/mlruns/444504848902634215/e0d4d328c70b47c3967842d49a50380c/artifacts
+end_time: 1733201227774
+entry_point_name: ''
+experiment_id: '444504848902634215'
+lifecycle_stage: active
+run_id: e0d4d328c70b47c3967842d49a50380c
+run_name: lyrical-robin-996
+run_uuid: e0d4d328c70b47c3967842d49a50380c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733200924038
+status: 3
+tags: []
+user_id: juanrios

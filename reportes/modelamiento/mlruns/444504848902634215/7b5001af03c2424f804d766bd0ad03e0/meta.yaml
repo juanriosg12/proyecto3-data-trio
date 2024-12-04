@@ -1,0 +1,16 @@
+artifact_uri: /Users/juanrios/Documents/Maestria/Analitica computacional para la toma
+  de desiciones/proyecto3/reportes/modelamiento/mlruns/444504848902634215/7b5001af03c2424f804d766bd0ad03e0/artifacts
+end_time: 1733196192478
+entry_point_name: ''
+experiment_id: '444504848902634215'
+lifecycle_stage: active
+run_id: 7b5001af03c2424f804d766bd0ad03e0
+run_name: zealous-lark-805
+run_uuid: 7b5001af03c2424f804d766bd0ad03e0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733195880386
+status: 3
+tags: []
+user_id: juanrios

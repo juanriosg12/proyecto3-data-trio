@@ -1,0 +1,16 @@
+artifact_uri: /Users/juanrios/Documents/Maestria/Analitica computacional para la toma
+  de desiciones/proyecto3/reportes/modelamiento/mlruns/444504848902634215/132382ab3c38438a95a6d6c2ae30dc28/artifacts
+end_time: 1733205323096
+entry_point_name: ''
+experiment_id: '444504848902634215'
+lifecycle_stage: active
+run_id: 132382ab3c38438a95a6d6c2ae30dc28
+run_name: redolent-kit-1000
+run_uuid: 132382ab3c38438a95a6d6c2ae30dc28
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733204825099
+status: 3
+tags: []
+user_id: juanrios

@@ -1,0 +1,16 @@
+artifact_uri: /Users/juanrios/Documents/Maestria/Analitica computacional para la toma
+  de desiciones/proyecto3/reportes/modelamiento/mlruns/444504848902634215/49fcc51aa9994de2950905435964cb4e/artifacts
+end_time: 1733201844699
+entry_point_name: ''
+experiment_id: '444504848902634215'
+lifecycle_stage: active
+run_id: 49fcc51aa9994de2950905435964cb4e
+run_name: spiffy-donkey-191
+run_uuid: 49fcc51aa9994de2950905435964cb4e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733201523631
+status: 3
+tags: []
+user_id: juanrios

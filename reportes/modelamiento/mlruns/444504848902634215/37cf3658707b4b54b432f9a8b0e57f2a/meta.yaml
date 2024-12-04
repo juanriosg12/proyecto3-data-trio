@@ -1,0 +1,16 @@
+artifact_uri: /Users/juanrios/Documents/Maestria/Analitica computacional para la toma
+  de desiciones/proyecto3/reportes/modelamiento/mlruns/444504848902634215/37cf3658707b4b54b432f9a8b0e57f2a/artifacts
+end_time: 1733199716605
+entry_point_name: ''
+experiment_id: '444504848902634215'
+lifecycle_stage: active
+run_id: 37cf3658707b4b54b432f9a8b0e57f2a
+run_name: rumbling-rat-355
+run_uuid: 37cf3658707b4b54b432f9a8b0e57f2a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733199371755
+status: 3
+tags: []
+user_id: juanrios

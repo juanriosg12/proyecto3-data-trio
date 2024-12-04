@@ -1,0 +1,16 @@
+artifact_uri: /Users/juanrios/Documents/Maestria/Analitica computacional para la toma
+  de desiciones/proyecto3/reportes/modelamiento/mlruns/444504848902634215/e048ac6a8014428d8178199cbc3b8d8c/artifacts
+end_time: 1733196645904
+entry_point_name: ''
+experiment_id: '444504848902634215'
+lifecycle_stage: active
+run_id: e048ac6a8014428d8178199cbc3b8d8c
+run_name: powerful-seal-335
+run_uuid: e048ac6a8014428d8178199cbc3b8d8c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733196442315
+status: 3
+tags: []
+user_id: juanrios

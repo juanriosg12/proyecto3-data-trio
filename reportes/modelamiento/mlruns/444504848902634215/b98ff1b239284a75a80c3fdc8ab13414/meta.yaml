@@ -1,0 +1,16 @@
+artifact_uri: /Users/juanrios/Documents/Maestria/Analitica computacional para la toma
+  de desiciones/proyecto3/reportes/modelamiento/mlruns/444504848902634215/b98ff1b239284a75a80c3fdc8ab13414/artifacts
+end_time: 1733200714024
+entry_point_name: ''
+experiment_id: '444504848902634215'
+lifecycle_stage: active
+run_id: b98ff1b239284a75a80c3fdc8ab13414
+run_name: fortunate-snake-478
+run_uuid: b98ff1b239284a75a80c3fdc8ab13414
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733200227815
+status: 3
+tags: []
+user_id: juanrios
