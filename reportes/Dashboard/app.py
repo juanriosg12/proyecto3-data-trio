@@ -5,11 +5,11 @@ import dash_bootstrap_components as dbc
 import plotly.express as px
 import pandas as pd
 import json
-# from tensorflow.keras.models import load_model
+from tensorflow.keras.models import load_model
 
 # Cargar los datos y el GeoJSON
-dataIcfes = pd.read_csv('reportes\ingeniera_de_datos\clean_saber11.csv')
-with open("reportes\Dashboard\HuilaCompleto.geojson", "r") as f:
+dataIcfes = pd.read_csv('clean_saber11.csv')
+with open("HuilaCompleto.geojson", "r") as f:
     huila_geojson = json.load(f)
 
 # Asegúrate de que los nombres de municipios coincidan entre dataIcfes y huila_geojson
@@ -34,7 +34,7 @@ score_options = [
 ]
 
 # Cargar el modelo
-# modelo = load_model("reportes\Dashboard\my_model.keras")
+modelo = load_model("final_model.keras", encoding='utf-8')
 
 # Crear la aplicación
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
