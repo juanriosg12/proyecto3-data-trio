@@ -5,18 +5,18 @@ import dash_bootstrap_components as dbc
 import plotly.express as px
 import pandas as pd
 import json
-from tensorflow.keras.models import load_model
+# from tensorflow.keras.models import load_model
 
 # Cargar los datos y el GeoJSON
-dataIcfes = pd.read_csv('clean_saber11.csv')  # Asegúrate de que este archivo contiene datos válidos
-with open("HuilaCompleto.geojson", "r") as f:
+dataIcfes = pd.read_csv('reportes\ingeniera_de_datos\clean_saber11.csv')
+with open("reportes\Dashboard\HuilaCompleto.geojson", "r") as f:
     huila_geojson = json.load(f)
 
 # Asegúrate de que los nombres de municipios coincidan entre dataIcfes y huila_geojson
 dataIcfes["cole_mcpio_ubicacion"] = dataIcfes["cole_mcpio_ubicacion"].str.upper()
 
 # Extraer el año de la columna 'periodo'
-dataIcfes["anio"] = dataIcfes["periodo"].astype(str).str[:4]  # Toma solo los primeros 4 dígitos
+dataIcfes["anio"] = dataIcfes["periodo"].astype(str).str[:4]  
 
 # Diccionario para mapear columnas a nombres amigables
 score_columns_mapping = {
@@ -34,7 +34,7 @@ score_options = [
 ]
 
 # Cargar el modelo
-modelo = load_model("my_model.keras")
+# modelo = load_model("reportes\Dashboard\my_model.keras")
 
 # Crear la aplicación
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
@@ -44,8 +44,8 @@ def create_choropleth(selected_column):
     fig = px.choropleth_mapbox(
         dataIcfes,
         geojson=huila_geojson,
-        locations="cole_mcpio_ubicacion",  # Columna de municipios en el dataset
-        featureidkey="properties.nombre_mpi",  # Clave de los municipios en el GeoJSON
+        locations="cole_mcpio_ubicacion",
+        featureidkey="properties.nombre_mpi",  
         color=selected_column,
         color_continuous_scale="Viridis",
         range_color=(dataIcfes[selected_column].min(), dataIcfes[selected_column].max()),
