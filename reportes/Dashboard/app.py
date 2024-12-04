@@ -1,15 +1,17 @@
 import dash
-from dash import dcc, html
+from dash import dcc, html, State
 from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 import plotly.express as px
 import pandas as pd
 import json
-# from tensorflow.keras.models import load_model
+import plotly.graph_objects as go
+#from tensorflow.keras.models import load_model
+#from process_inputs import code_features
 
 # Cargar los datos y el GeoJSON
-dataIcfes = pd.read_csv('reportes\ingeniera_de_datos\clean_saber11.csv')
-with open("reportes\Dashboard\HuilaCompleto.geojson", "r") as f:
+dataIcfes = pd.read_csv('clean_saber11.csv')
+with open("HuilaCompleto.geojson", "r") as f:
     huila_geojson = json.load(f)
 
 # Asegúrate de que los nombres de municipios coincidan entre dataIcfes y huila_geojson
@@ -34,7 +36,45 @@ score_options = [
 ]
 
 # Cargar el modelo
-# modelo = load_model("reportes\Dashboard\my_model.keras")
+# modelo = load_model("final_model.keras")
+# Diccionarios de codificación
+estu_tipodocumento_to_num = {"CC": 0, "TI": 1, "OTHER": 2}
+zona = {'RURAL': 0, 'URBANO': 1}
+cole_bilingue_to_num = {"N": 0, "S": 1, "unknown": -10}
+cole_caracter_to_num = {"ACADÉMICO": 0, "NO APLICA": 1, "TÉCNICO": 2, "TÉCNICO/ACADÉMICO": 3}
+cole_genero_to_num = {"FEMENINO": 0, "MASCULINO": 1, "MIXTO": 2}
+cole_jornada_to_num = {"COMPLETA": 0, "MAÑANA": 1, "NOCHE": 2, "SABATINA": 3, "TARDE": 4, "UNICA": 5}
+cole_naturaleza_to_num = {"NO OFICIAL": 0, "OFICIAL": 1}
+cole_sede_principal_to_num = {"S": 0, "N": 1}
+estu_genero_to_num = {"F": 0, "M": 1, "unknown": -10}
+fami_cuartoshogar_to_num = {"1 a 2": 0, "3 a 4": 1, "5": 2, "6+": 3, "unknown": -10}
+fami_educacionm_to_num = {
+    "Educación profesional completa": 0,
+    "Educación profesional incompleta": 1,
+    "Ninguno": 2,
+    "No Aplica": 2,
+    "No sabe": 2,
+    "Postgrado": 3,
+    "Primaria completa": 4,
+    "Primaria incompleta": 5,
+    "Secundaria (Bachillerato) completa": 6,
+    "Secundaria (Bachillerato) incompleta": 7,
+    "Técnica o tecnológica completa": 8,
+    "Técnica o tecnológica incompleta": 9,
+    "unknown": -10}
+fami_estratovivienda_to_num = {
+    "Estrato 1": 1, "Estrato 2": 2, "Estrato 3": 3, "Estrato 4": 4, "Estrato 5": 5, "Estrato 6": 6, "Sin Estrato": -10}
+fami_personashogar_to_num = {"1 a 2": 0, "3 a 4": 1, "5 a 6": 2, "7 a 8": 3, "9 o más": 4, "unknown": -10}
+nosi_to_num = {"No": 0, "Si": 1, "unknown": -10}
+
+# Lista de variables necesarias
+variables = [
+    'cole_mcpio_ubicacion', 'estu_tipodocumento', 'cole_area_ubicacion', 'cole_bilingue', 'cole_caracter',
+    'cole_genero', 'cole_jornada', 'cole_naturaleza', 'cole_sede_principal', 'estu_genero',
+    'fami_cuartoshogar', 'fami_educacionmadre', 'fami_educacionpadre', 'fami_estratovivienda',
+    'fami_personashogar', 'fami_tieneautomovil', 'fami_tienecomputador', 'fami_tieneinternet',
+    'fami_tienelavadora', 'periodo'
+]
 
 # Crear la aplicación
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
@@ -109,10 +149,10 @@ def update_evolucion(colegio_seleccionado):
     return fig, info
 
 @app.callback(
-    Output("grafico-correlacion", "figure"),
+    Output("grafico-estratos", "figure"),
     [Input("anio-dropdown", "value")],
 )
-def update_correlacion(anio_seleccionado):
+def update_estratos(anio_seleccionado):
     # Filtrar los datos por el año seleccionado
     datos_filtrados = dataIcfes[dataIcfes["anio"] == anio_seleccionado]
     
@@ -133,6 +173,42 @@ def update_correlacion(anio_seleccionado):
     )
     fig.update_layout(title_x=0.5)  # Centrar el título
     return fig
+
+# Callback para realizar la predicción
+@app.callback(
+    [Output("prediction-graph", "figure"),
+     Output("output-prediction", "children")],
+    [Input("predict-button", "n_clicks")],
+    [State(f"input-{variable}", "value") for variable in variables]
+)
+def predict_and_compare(n_clicks, *inputs):
+    if n_clicks > 0:
+        # Crear un DataFrame con las entradas del usuario
+        user_data = {var: [val] for var, val in zip(variables, inputs)}
+        df_user = pd.DataFrame(user_data)
+
+        # Procesar los datos con la función code_features()
+        # Aquí se debe incluir code_features() de tu archivo process_inputs.py
+        #df_processed = code_features(df_user)
+
+        # Realizar la predicción
+        # prediction = model.predict(df_processed)[0][0]
+        prediction = 2
+
+        # Calcular el promedio del municipio
+        municipio = inputs[0]  # cole_mcpio_ubicacion
+        avg_score = dataIcfes[dataIcfes["cole_mcpio_ubicacion"] == municipio]["punt_global"].mean()
+
+        # Crear gráfico de barras
+        fig = go.Figure(data=[
+            go.Bar(name="Predicción", x=["Puntaje"], y=[prediction]),
+            go.Bar(name="Promedio Municipio", x=["Puntaje"], y=[avg_score])
+        ])
+        fig.update_layout(barmode='group', title="Comparación de Puntajes")
+
+        return fig, f"Predicción: {prediction:.2f}, Promedio Municipio: {avg_score:.2f}"
+
+    return {}, "Esperando entrada del usuario."
 
 # Layout de la aplicación
 app.layout = html.Div(
@@ -316,7 +392,7 @@ app.layout = html.Div(
                                     placeholder="Seleccione un año",
                                 ),
                                 dcc.Graph(
-                                    id="grafico-correlacion",
+                                    id="grafico-estratos",
                                     config={"displayModeBar": False},
                                     style={"height": "400px"},
                                 ),
