@@ -1,0 +1,16 @@
+artifact_uri: /Users/juanrios/Documents/Maestria/Analitica computacional para la toma
+  de desiciones/proyecto3/reportes/modelamiento/mlruns/444504848902634215/91104d06e16e4fe0b9bd227b8aded969/artifacts
+end_time: 1733192183427
+entry_point_name: ''
+experiment_id: '444504848902634215'
+lifecycle_stage: active
+run_id: 91104d06e16e4fe0b9bd227b8aded969
+run_name: bouncy-shrike-401
+run_uuid: 91104d06e16e4fe0b9bd227b8aded969
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733192111655
+status: 4
+tags: []
+user_id: juanrios

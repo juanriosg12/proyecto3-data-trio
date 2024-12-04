@@ -1,0 +1,16 @@
+artifact_uri: /Users/juanrios/Documents/Maestria/Analitica computacional para la toma
+  de desiciones/proyecto3/reportes/modelamiento/mlruns/444504848902634215/e4d27bcc47824114b8b93e112fa1ca56/artifacts
+end_time: 1733202164039
+entry_point_name: ''
+experiment_id: '444504848902634215'
+lifecycle_stage: active
+run_id: e4d27bcc47824114b8b93e112fa1ca56
+run_name: chill-newt-445
+run_uuid: e4d27bcc47824114b8b93e112fa1ca56
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733201844721
+status: 3
+tags: []
+user_id: juanrios

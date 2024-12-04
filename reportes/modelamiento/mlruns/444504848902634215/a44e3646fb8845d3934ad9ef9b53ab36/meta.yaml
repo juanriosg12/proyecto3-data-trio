@@ -1,0 +1,16 @@
+artifact_uri: /Users/juanrios/Documents/Maestria/Analitica computacional para la toma
+  de desiciones/proyecto3/reportes/modelamiento/mlruns/444504848902634215/a44e3646fb8845d3934ad9ef9b53ab36/artifacts
+end_time: 1733197375619
+entry_point_name: ''
+experiment_id: '444504848902634215'
+lifecycle_stage: active
+run_id: a44e3646fb8845d3934ad9ef9b53ab36
+run_name: abundant-bee-960
+run_uuid: a44e3646fb8845d3934ad9ef9b53ab36
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733197073871
+status: 3
+tags: []
+user_id: juanrios

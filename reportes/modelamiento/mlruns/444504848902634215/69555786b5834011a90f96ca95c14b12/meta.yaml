@@ -1,0 +1,16 @@
+artifact_uri: /Users/juanrios/Documents/Maestria/Analitica computacional para la toma
+  de desiciones/proyecto3/reportes/modelamiento/mlruns/444504848902634215/69555786b5834011a90f96ca95c14b12/artifacts
+end_time: 1733207627302
+entry_point_name: ''
+experiment_id: '444504848902634215'
+lifecycle_stage: active
+run_id: 69555786b5834011a90f96ca95c14b12
+run_name: redolent-rat-149
+run_uuid: 69555786b5834011a90f96ca95c14b12
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733207274503
+status: 3
+tags: []
+user_id: juanrios

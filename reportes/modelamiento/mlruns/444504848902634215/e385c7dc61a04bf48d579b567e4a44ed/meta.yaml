@@ -1,0 +1,16 @@
+artifact_uri: /Users/juanrios/Documents/Maestria/Analitica computacional para la toma
+  de desiciones/proyecto3/reportes/modelamiento/mlruns/444504848902634215/e385c7dc61a04bf48d579b567e4a44ed/artifacts
+end_time: 1733194453472
+entry_point_name: ''
+experiment_id: '444504848902634215'
+lifecycle_stage: active
+run_id: e385c7dc61a04bf48d579b567e4a44ed
+run_name: stylish-hound-250
+run_uuid: e385c7dc61a04bf48d579b567e4a44ed
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1733193811119
+status: 3
+tags: []
+user_id: juanrios
